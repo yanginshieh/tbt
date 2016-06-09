@@ -11,9 +11,7 @@ body {
     margin: 0;
     padding: 0;
 }
-*:focus {
-    outline: none;
-}
+
 p {
     font-family: 'Helvetica';
     font-weight: 400;
@@ -46,10 +44,13 @@ video {
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 .slider {
     width: 100%;
     margin: auto;
-    margin-top:200px;
 }
 
 .slick-slide {
@@ -77,4 +78,46 @@ video {
     width: 100%;
     padding: 20px 20px 10px 20px;
     z-index: 100;
+}
+
+.slick-slider .slick-list {
+    height: 100vh;
+}
+
+.slick-track {
+    height: 100vh;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+    align-items: center;
+}
+
+.photo-text-container {
+    position: relative;
+}
+
+.slick-active .photo-text-container .img-text {
+    position: absolute;
+    width: 100%;
+    bottom: -47px;
+    text-align: center;
+    display: block;
+    color: black;
+}
+
+.photo-text-container .img-text {
+    display: none;
+    color: white;
+}
+
+.slick-slide img {
+    -webkit-filter: opacity(.2) grayscale(20%);
+    filter: opacity(.2) grayscale(20%);
+    transition: all 1s ease-in-out;
+}
+
+.slick-slide.slick-current img{
+    -webkit-filter: opacity(1) grayscale(0);
+    filter: opacity(1) grayscale(0);
 }

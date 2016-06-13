@@ -75,4 +75,13 @@ $(document).ready(function () {
             }, 250);
         });
     });
+
+    $("body").keydown(function(e) {
+      if(e.which == 37) { // left     
+        $('.variable').slick('slickPrev');
+      }
+      else if(e.which == 39) { // right     
+        $('.variable').slick('slickNext');
+      }
+    });
 });

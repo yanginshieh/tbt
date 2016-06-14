@@ -31,10 +31,12 @@ $(document).ready(function () {
                 centerMode: true,
                 variableWidth: true,
                 arrows: false,
+                lazyLoad: 'progressive',
                 responsive: [
                     {
                         breakpoint: 975,
                         settings: {
+                        lazyLoad: 'progressive',
                         centerMode: true,
                         variableWidth: false,
                         centerPadding: '10%'
@@ -83,5 +85,9 @@ $(document).ready(function () {
       else if(e.which == 39) { // right     
         $('.variable').slick('slickNext');
       }
+    });
+
+    $("#goBackOriginal").click(function(){
+        $('.variable').slick('slickGoTo', 0);
     });
 });

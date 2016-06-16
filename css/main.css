@@ -80,6 +80,7 @@ a:hover {
 /*scroll from anywhere on the page*/
 .slick-slider .slick-list {
     height: 100vh;
+    overflow-y: auto;
 }
 .slick-track {
     height: 100vh;
@@ -169,4 +170,17 @@ a:hover {
 
 .vertical {
     margin:auto;
+    width: 100%;
+}
+
+.vertical img {
+    margin: 0 auto;
+}
+
+.img-container {
+    width: 100%;
+    height: 600px; /*determine what height you want it in*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }

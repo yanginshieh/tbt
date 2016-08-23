@@ -21,7 +21,7 @@ $(document).ready(function () {
                 variableWidth: false,
                 centerPadding: '10%',
                 lazyLoad: 'ondemand',
-                arrows: false
+                arrows: true
             });
         }
         else {
@@ -30,7 +30,7 @@ $(document).ready(function () {
                 slidesToShow: 1,
                 centerMode: true,
                 variableWidth: true,
-                arrows: false,
+                arrows: true,
                 lazyLoad: 'progressive',
                 responsive: [
                     {

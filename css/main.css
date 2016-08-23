@@ -1,7 +1,7 @@
 .font,
 html,
 body {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "proxima-nova-alt-condensed", "Lucida Grande", sans-serif;
     font-weight: 400;
     line-height: 1.3;
     height: 100%;
@@ -13,7 +13,7 @@ body {
 }
 
 p {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "proxima-nova-alt-condensed", "Lucida Grande", sans-serif;
     font-weight: 400;
     line-height: 1.3;
 }
@@ -31,14 +31,13 @@ video {
     cursor: pointer;
 }
 
-
-
 a, a:active, a:visited {
     color: inherit;
     text-decoration: none;
 }
 a:hover {
-    color: #777;
+    text-decoration: none;
+    color: #333;
 }
 * {
     box-sizing: border-box;
@@ -56,8 +55,6 @@ a:hover {
     color: black;
 }
 
-
-
 /*adjust slide margins*/
 .slick-slide {
     margin: 0 0.2%;
@@ -68,14 +65,12 @@ a:hover {
     }
 }
 
-
+/* ============================================================ */
 
 /*disable outline on click*/
 *:focus {
-    outline: none;
+    outline: #eee dashed 1px;
 }
-
-
 
 /*scroll from anywhere on the page*/
 .slick-slider .slick-list {
@@ -90,8 +85,6 @@ a:hover {
     align-items: center;
 }
 
-
-
 /*fade slides, focus on current*/
 .slick-slide img {
     -webkit-filter: opacity(.2) grayscale(20%);
@@ -103,8 +96,6 @@ a:hover {
     filter: opacity(1) grayscale(0);
 }
 
-
-
 /*hide text, reveal on current*/
 .photo-text-container {
     position: relative;
@@ -112,41 +103,26 @@ a:hover {
 .slick-active .photo-text-container .img-text {
     position: absolute;
     width: 100%;
-    bottom: -5px;
+    top: 105.5%;
     text-align: center;
     display: block;
 }
 .photo-text-container .img-text {
     display: none;
-    color: #999;
-    font-size: 13px;
+    color: #888;
+    font-size: 1.2em;
     line-height: 1.4;
 }
-@media (max-width: 767px) {
-    .slick-active .photo-text-container .img-text {
-        bottom:-30px;
-    }
-}
-@media (max-width: 640px) {
-    .photo-text-container .img-text {
-        font-size:11px;
-    }
-    .slick-active .photo-text-container .img-text {
-        bottom:-35px;
-    }
-}
-@media (max-width: 450px) {
-    .slick-active .photo-text-container .img-text {
-        bottom:-50px;
-    }
-}
-
 .first {
     padding-left:10%;
     padding-right:10%;
 }
-
-
+@media (max-width: 640px) {
+    .slick-active .photo-text-container .img-text {
+        font-size: .95em; 
+        top:111%;
+    }
+}
 
 /*back button*/
 .back-button {
@@ -167,8 +143,6 @@ a:hover {
     background: transparent url("../img/back2.png") no-repeat;
 }
 
-
-
 /*vertical images*/
 @media (min-width: 640px) and (max-width: 974px) {
     .vertical {
@@ -187,48 +161,42 @@ a:hover {
     }
 }
 .slick-active .photo-text-container.vertical .img-text {
-        bottom: -80px;
+        top: 105%;
 }
-@media (min-width: 700px) {
-    .slick-active .photo-text-container.vertical .img-text {
-        bottom: -90px;
-    }
-}
-@media (min-width: 768px) {
-    .slick-active .photo-text-container.vertical .img-text {
-        bottom: -75px;
-    }
-}
-
-
 
 /*vertical scrolling*/
-    .slick-initialized .slick-slide {
-        padding: 450px 0;
-    }
+
+.slick-initialized .slick-slide {
+    padding: .29% 0 .32% 0;
+}
 @media (max-width: 974px) {
-    .slick-initialized .slick-slide {
-        padding: 550px 0;
+.slick-initialized .slick-slide {
+    padding: 2% 0 2.2% 0;
+    }
+    .slick-active .photo-text-container.vertical .img-text {
+        top: 104%;
     }
 }
-@media (max-width: 874px) {
-    .slick-initialized .slick-slide {
-        padding: 500px 0;
-    }
-}
-@media (max-width: 774px) {
-    .slick-initialized .slick-slide {
-        padding: 450px 0;
-    }
-}
-@media (max-width: 674px) {
-    .slick-initialized .slick-slide {
-        padding: 400px 0;
+@media (max-width: 640px) {
+.slick-initialized .slick-slide {
+    padding: 2% 0 2.4% 0;
     }
 }
 
-@media (max-width: 600px) {
-    .slick-initialized .slick-slide {
-        padding: 325px 0;
-    }
+/*nav arrows*/
+.slick-arrow {
+    position: absolute;
+    top:48%;
+}
+.slick-next{
+    right:5px;
+}
+.slick-prev{
+    left:5px;
+}
+.slick-prev:before, .slick-next:before {
+    opacity:.32;
+}
+.slick-prev:hover, .slick-next:hover {
+    opacity:.5;
 }

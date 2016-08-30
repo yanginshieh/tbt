@@ -193,6 +193,7 @@ a:hover {
 }
 .slick-prev{
     left:5px;
+    z-index: 1;
 }
 .slick-prev:before, .slick-next:before {
     opacity:.32;

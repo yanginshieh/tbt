@@ -190,13 +190,18 @@ a:hover {
 }
 .slick-next{
     right:5px;
+    width:25px;
+    height:25px;
 }
 .slick-prev{
     left:5px;
+    width:25px;
+    height:25px;
     z-index: 1;
 }
 .slick-prev:before, .slick-next:before {
     opacity:.32;
+    font-size:25px;
 }
 .slick-prev:hover, .slick-next:hover {
     opacity:.5;

@@ -135,14 +135,14 @@ a:hover {
     margin: 20px;
     z-index: 100;
     font-size: 20px;
-    color: #aaa;
+    color: #999;
     text-align: center
 }
-.backbutton:visited, .back-button:focus  {
-    color: #aaa;
+.back-button:visited, .back-button:focus, .back-button:active {
+    color: #999;
 }
-.back-button:hover, .backbutton:active {
-    color: #777;
+.back-button:hover {
+    color: #666;
 }
 
 /*vertical images*/
@@ -201,7 +201,7 @@ a:hover {
     height:25px;
     z-index: 1;
 }
-.slick-prev:before, .slick-next:before {
+.slick-prev:before, .slick-next:before, .slick-prev:focus, .slick-next:focus {
     opacity:.32;
     font-size:25px;
 }

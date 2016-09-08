@@ -69,7 +69,7 @@ a:hover {
 
 /*disable outline on click*/
 *:focus {
-    outline: #eee dashed 1px;
+    outline: none;
 }
 
 /*scroll from anywhere on the page*/

@@ -208,3 +208,10 @@ a:hover {
 .slick-prev:hover, .slick-next:hover {
     opacity:.5;
 }
+
+.slick-slider .slick-list:hover {
+    cursor: grab;
+}
+.slick-slider .slick-list:active {
+    cursor: grabbing;
+}
